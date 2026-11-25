@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FinTas Trading
 
-## Getting Started
+A Next.js + React paper-trading and personal money-management demo. All market prices, orders, balances and account data are simulated. No real trades are placed and no real money is moved.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Demo accounts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Role  | Email                       | Password  |
+| ----- | --------------------------- | --------- |
+| User  | `demo@fintastrading.app`    | `demo123` |
+| Admin | `admin@fintastrading.app`   | `admin123` |
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Landing page, dashboard, market, stock detail, paper trading, portfolio, watchlist, alerts, notifications, money management, account and admin pages
+- Server-side order validation, virtual balance updates and cookie-based auth
+- Local JSON demo data store under `.fintas-data/db.json`
+- **AI Mode** at `/ai` with contextual insights and a question/answer assistant
+  - Works offline with a rule-based demo engine
+  - Set `OPENAI_API_KEY` (and optionally `OPENAI_MODEL`) to connect an OpenAI-compatible model
+  - The API key stays server-side and is never sent to the browser
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Local demo data is ignored by Git.
+- AI Mode is educational. It never executes trades or provides personalized financial advice.
 
-## Deploy on Vercel
+## Production build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```

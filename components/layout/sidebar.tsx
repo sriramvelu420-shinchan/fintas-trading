@@ -7,6 +7,7 @@ import styles from "./sidebar.module.css";
 
 const nav = [
   { href: "/dashboard", label: "Dashboard", icon: "▦" },
+  { href: "/ai", label: "AI Mode", icon: "✨" },
   { href: "/market", label: "Stock Market", icon: "📈" },
   { href: "/trading", label: "Paper Trading", icon: "💹" },
   { href: "/portfolio", label: "Portfolio", icon: "🧺" },

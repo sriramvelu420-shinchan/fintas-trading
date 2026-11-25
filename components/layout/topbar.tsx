@@ -42,6 +42,7 @@ export function Topbar() {
         <span className={styles.pill}>⚠️ Simulated • Paper Trading Only • No Real Money</span>
       </div>
       <div className={styles.right}>
+        <Link href="/ai" className={styles.aiLink}>AI Mode</Link>
         <Button variant="ghost" size="sm" onClick={toggleTheme}>
           {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
         </Button>

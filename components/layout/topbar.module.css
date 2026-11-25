@@ -51,6 +51,23 @@
   gap: 10px;
 }
 
+.aiLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  background: linear-gradient(180deg, rgba(167, 139, 250, 0.16), rgba(167, 139, 250, 0.04));
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.aiLink:hover {
+  background: rgba(167, 139, 250, 0.2);
+}
+
 .iconBtn {
   display: inline-flex;
   align-items: center;

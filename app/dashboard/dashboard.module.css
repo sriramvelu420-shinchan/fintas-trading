@@ -182,7 +182,35 @@
   padding: 10px;
 }
 
+.aiStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.aiInsight {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: rgba(148, 163, 184, 0.05);
+}
+
+.aiInsightTitle {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.aiInsightBody {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
 @media (max-width: 1200px) {
+  .aiStrip {
+    grid-template-columns: 1fr;
+  }
   .kpiGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

@@ -11,12 +11,13 @@ export default function Home() {
           <div className={styles.logoDot} />
           <div>
             <div className={styles.brandName}>FinTas Trading</div>
-            <div className={styles.brandSub}>Paper Trading • Money Marketing Platform</div>
+            <div className={styles.brandSub}>Paper Trading • Money Management Platform</div>
           </div>
         </div>
         <nav className={styles.nav}>
           <Link href="/market">Market</Link>
           <Link href="/dashboard">Dashboard</Link>
+          <Link href="/ai">AI Mode</Link>
           <Link href="/auth/login">Login</Link>
           <Link href="/auth/register">
             <Button size="sm">Get Started</Button>
@@ -46,6 +47,7 @@ export default function Home() {
           </div>
           <div className={styles.heroBadges}>
             <span className="badge">Virtual Wallet</span>
+            <span className="badge">AI Mode</span>
             <span className="badge">Live-like Charts</span>
             <span className="badge">Budgets &amp; Goals</span>
             <span className="badge">Admin Controls</span>

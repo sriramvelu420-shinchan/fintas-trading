@@ -1,6 +1,7 @@
 ﻿import { AppShell } from "@/components/layout/app-shell";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getSession } from "@/lib/auth";
+import { getAiInsights } from "@/lib/ai";
 import { getAccount, getDb, getHoldings, getNotifications, getOrders, getQuotes, getTransactions } from "@/lib/store";
 import { computeMoneySummary, computePortfolio } from "@/lib/finance";
 import { formatCurrency, formatPercent, classForChange } from "@/lib/utils";
@@ -160,6 +161,32 @@ export default async function DashboardPage() {
           </CardContent>
         </Card>
       </section>
+
+      {session ? (
+        <Card>
+          <CardHeader>
+            <CardTitle>AI Mode Insights</CardTitle>
+            <CardDescription>
+              Quick signals from your demo data ·{" "}
+              <Link href="/ai" className="text-primary">
+                Open AI Mode →
+              </Link>
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className={styles.aiStrip}>
+              {getAiInsights(session.id, session.name)
+                .slice(0, 3)
+                .map((insight) => (
+                  <div key={insight.id} className={styles.aiInsight}>
+                    <div className={styles.aiInsightTitle}>{insight.title}</div>
+                    <div className={styles.aiInsightBody}>{insight.body}</div>
+                  </div>
+                ))}
+            </div>
+          </CardContent>
+        </Card>
+      ) : null}
 
       <section className={styles.gridThree}>
         <Card>
