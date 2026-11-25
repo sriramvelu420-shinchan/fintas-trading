@@ -1,0 +1,126 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.subtitle {
+  margin: 4px 0 0 0;
+  color: var(--text-muted);
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kpiValue {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.kpiSub {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.gridTwo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.txnList,
+.budgetList,
+.goalList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.txnRow,
+.budgetRow,
+.goalRow {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.txnRow {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.txnCat {
+  font-weight: 600;
+}
+
+.txnDesc {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.budgetTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.barBg {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.25);
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #22c55e);
+}
+
+.budgetBot {
+  display: flex;
+  justify-content: space-between;
+}
+
+.msg {
+  color: var(--primary);
+}
+
+.empty {
+  color: var(--text-muted);
+}
+
+@media (max-width: 1100px) {
+  .kpiGrid,
+  .gridTwo {
+    grid-template-columns: 1fr;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

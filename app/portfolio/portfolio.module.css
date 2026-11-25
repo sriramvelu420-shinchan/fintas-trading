@@ -1,0 +1,76 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+}
+
+.subtitle {
+  margin: 4px 0 0 0;
+  color: var(--text-muted);
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kpiValue {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.kpiSub {
+  color: var(--text-muted);
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns: 100px 1.6fr 80px 110px 110px 140px 140px 140px 120px 90px;
+  gap: 10px;
+  align-items: center;
+}
+
+.tableHead {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.tableRow {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.sym {
+  font-weight: 700;
+}
+
+.empty {
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 1300px) {
+  .kpiGrid {
+    grid-template-columns: 1fr;
+  }
+  .tableHead,
+  .tableRow {
+    grid-template-columns: 1fr;
+  }
+}
